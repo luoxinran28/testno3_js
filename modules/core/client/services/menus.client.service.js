@@ -1,8 +1,8 @@
-'use strict';
 
 //Menu service used for managing  menus
 angular.module('core').service('Menus', [
   function () {
+    'use strict';
     // Define a set of default roles
     this.defaultRoles = ['user', 'admin'];
 
@@ -118,6 +118,9 @@ angular.module('core').service('Menus', [
       for (var itemIndex in this.menus[menuId].items) {
         if (this.menus[menuId].items[itemIndex].state === parentItemState) {
           // Push new submenu item
+          if (options.title === 'Create Categories') {
+            console.log('categories');
+          }
           this.menus[menuId].items[itemIndex].items.push({
             title: options.title || '',
             state: options.state || '',
