@@ -11,6 +11,7 @@
         <a data-ng-repeat="category in categories | limitTo: offset - categories.length | limitTo: pageSize" data-ng-href="#!/categories/{{category._id}}" class="list-group-item">
             <h4 class="list-group-item-heading" data-ng-bind="category.name"></h4>
             <span data-ng-bind="category.description"></span>
+            <span data-ng-bind="category.created"></span>
         </a>
     </div>
     <!-- this is the paging control -->

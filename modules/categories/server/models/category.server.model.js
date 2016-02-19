@@ -21,9 +21,10 @@ var CategorySchema = new Schema({
     // the property name
     created: {         
         // types are defined e.g. String, Date, Number (http://mongoosejs.com/docs/guide.html)
-        type: Date,   
+        type: String,   
         // default values can be set
-        default: Date.now 
+        default: '',
+        trim: true
     },
     description: {
         type: String,

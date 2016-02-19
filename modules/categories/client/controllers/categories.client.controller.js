@@ -18,7 +18,8 @@ angular.module('categories').controller('CategoriesController', ['$scope', '$sta
             // Create new Category object
             var category = new Categories({
                 name: this.name,
-                description: this.description
+                description: this.description,
+                created: $scope.date
             });
 
             // Redirect after save
